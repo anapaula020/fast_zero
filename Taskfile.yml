@@ -1,0 +1,7 @@
+version: '3'
+
+tasks:
+  run:
+    desc: Inicia o servidor FastAPI com Uvicorn
+    cmds:
+      - uvicorn fast_zero.fast_zero.app:app --reload
