@@ -3,5 +3,16 @@ version: '3'
 tasks:
   run:
     desc: Inicia o servidor FastAPI com Uvicorn
-    cmds:
-      - uvicorn fast_zero.fast_zero.app:app --reload
+    cmd: uvicorn fast_zero.fast_zero.app:app --reload
+
+  test:
+    desc: Roda os testes com pytest
+    cmd: pytest
+
+  lint:
+    desc: Verifica o estilo do código com flake8
+    cmd: flake8 fast_zero
+
+  format:
+    desc: Formata o código com black
+    cmd: black fast_zero
